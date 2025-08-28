@@ -12,9 +12,9 @@ d. querySelectorAll - It selects the all element of specific CSS Selector(class,
 2.How do you create and insert a new element into the DOM?
 Answer: 
 
-First, we create element (document.createElement('ul'))
-second, we add attributes(ul.innerText)
-third, we append the child into parentnode (document.getElementById().appendChild())
+First, we create element (document.createElement('p'))
+second, we add attributes(p.innerText)
+third, we append the child into parentnode (document.getElementById().appendChild(p))
 
 3.What is Event Bubbling and how does it work?
 Answer: 
@@ -29,4 +29,4 @@ It is useful because it takes less time and provides better performance.It also 
 
 5.What is the difference between preventDefault() and stopPropagation() methods?
 Answer: 
-PreventDefault() stops the default behaviour of a feature and PreventDefault() does not stop bubbling event (for example- form tag submit button reload stoppage). The stopPropagation() stops the bubbling up of the DOM Tree.
+PreventDefault() stops the default behaviour of a feature  (for example- form tag submit button reload stoppage) and PreventDefault() does not stop bubbling event. The stopPropagation() stops the bubbling up of the DOM Tree.It usually is used in Event Bubbling.
