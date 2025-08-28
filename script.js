@@ -26,7 +26,7 @@
         const newCoin = parseInt(coin) - 20;
         document.getElementById("navbar-coin").innerText = newCoin;
 
-            // Add to history visually
+            // Add to history 
             const time = new Date().toLocaleTimeString();
             const div = document.createElement('div');
             div.innerHTML = `
