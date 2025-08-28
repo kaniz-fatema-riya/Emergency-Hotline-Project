@@ -25,6 +25,31 @@
     
         const newCoin = parseInt(coin) - 20;
         document.getElementById("navbar-coin").innerText = newCoin;
+
+            // Add to history visually
+            const time = new Date().toLocaleTimeString();
+            const div = document.createElement('div');
+            div.innerHTML = `
+               <div class="bg-gray-100 flex gap-6 p-4 justify-between items-center mt-5">
+                  <div>
+                     <h1 class="font-semibold">${serviceName}</h1>
+                     <p class="text-sm">${serviceNumber}</p>
+                  </div>
+                  <div>
+                     <p>${time}</p>
+                  </div>
+               </div>
+            `;
+
+            document.getElementById('history-container').appendChild(div.firstElementChild);
+
+      // Clear history button functionality
+      const clearButton = document.getElementById('clear-button');
+      if (clearButton) {
+         clearButton.addEventListener('click', function() {
+            document.getElementById('history-container').innerHTML = '';
+         });
+      }
     }
     
 }
@@ -133,3 +158,8 @@ document.getElementById('ninth-call-button').addEventListener('click', function(
   document.getElementById('ninth-copy-button').addEventListener('click', function(){
    copyButton('railway-number'); 
    });
+
+
+    
+                   
+    
